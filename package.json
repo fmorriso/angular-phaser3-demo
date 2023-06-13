@@ -1,6 +1,6 @@
 {
   "name": "angular-phaser3-demo",
-  "version": "0.0.0",
+  "version": "2023.6.0",
   "scripts": {
     "ng": "ng",
     "build": "ng build --configuration=development",
