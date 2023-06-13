@@ -3,7 +3,7 @@
 This project was originally generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.6.
 
 ## Update History
-* 2023-06-13 - upgraded to Angular 16.1 and Phaser3 3.60
+* 2023-06-13 - upgraded to Angular 16.1 and Phaser 3.60
 
 ## References
 * [How to build games in Angular with Phaser 3: Getting Started](https://grimcodes.com/how-to-build-games-in-angular-with-phaser-3-getting-started/)
