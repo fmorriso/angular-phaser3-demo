@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 //
 import Phaser from 'phaser';
 //
-import { MainScene } from './main-scene';
+import {MainScene} from './main-scene';
+import Center = Phaser.Scale.Center;
 
 @Component({
   selector: 'app-game',
@@ -10,7 +11,7 @@ import { MainScene } from './main-scene';
   styleUrls: ['./game.component.scss']
 })
 export class GameComponent implements OnInit {
-  phaserGame!: Phaser.Game; 
+  phaserGame!: Phaser.Game;
   gameConfig: Phaser.Types.Core.GameConfig;
   scaleConfig: Phaser.Types.Core.ScaleConfig;
   physicsConfig: Phaser.Types.Core.PhysicsConfig;
@@ -20,7 +21,8 @@ export class GameComponent implements OnInit {
     this.scaleConfig = {
       parent: 'gameContainer',
       mode: Phaser.Scale.RESIZE,
- 
+      autoCenter: Center.CENTER_BOTH,
+      height: 'inherit'
     };
 
     this.physicsConfig = {
@@ -32,7 +34,7 @@ export class GameComponent implements OnInit {
     };
 
     this.gameConfig = {
-      type: Phaser.AUTO,      
+      type: Phaser.AUTO,
       scene: [ MainScene ],
       customEnvironment: false,
       parent: 'gameContainer',
