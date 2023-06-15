@@ -11,14 +11,20 @@ import { MainScene } from './main-scene';
 })
 export class GameComponent implements OnInit {
   phaserGame!: Phaser.Game; 
-  config: Phaser.Types.Core.GameConfig;
+  gameConfig: Phaser.Types.Core.GameConfig;
+  scaleConfig: Phaser.Types.Core.ScaleConfig;
 
   constructor(){
-    this.config = {
-      type: Phaser.AUTO,
-      height: 600,
-      width: 800,
+    this.scaleConfig = {
+      parent: 'gameContainer',
+      mode: Phaser.Scale.RESIZE,
+      width: 512,
+      height: 768
+    }
+    this.gameConfig = {
+      type: Phaser.AUTO,      
       scene: [ MainScene ],
+      customEnvironment: false,
       parent: 'gameContainer',
       title: "Grim RPG",
       backgroundColor: "#18216D",
@@ -29,11 +35,12 @@ export class GameComponent implements OnInit {
            gravity: { y: 0 }
         }
       },
+      scale: this.scaleConfig
     };
   }
 
   ngOnInit(): void {
-    
+    this.phaserGame = new Phaser.Game(this.gameConfig);
   }
 
 }

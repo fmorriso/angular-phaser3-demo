@@ -1,4 +1,6 @@
 export class MainScene extends Phaser.Scene {
+    private updateCount: number = 0;
+
     constructor() {
         const sceneConfig:Phaser.Types.Scenes.SettingsConfig = {
             key: 'MainScene'
@@ -14,6 +16,11 @@ export class MainScene extends Phaser.Scene {
         console.log('preload method');
       }
       override update(){
-        console.log('update method');
+        this.updateCount++;
+        if(this.updateCount < 10)
+        {
+          console.log('update method');
+        }
+        
       }
 }
