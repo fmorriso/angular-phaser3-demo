@@ -4,9 +4,11 @@ This project was originally generated with [Angular CLI](https://github.com/angu
 
 ## Update History
 * 2023-06-13 - upgraded to Angular 16.1 and Phaser 3.60
+* 2023-06-14 - added rudimentary Game component with CSS FlexBox
 
 ## References
 * [How to build games in Angular with Phaser 3: Getting Started](https://grimcodes.com/how-to-build-games-in-angular-with-phaser-3-getting-started/)
+* [Using Phaser in an Angular 8 Component](https://braelynnn.medium.com/using-phaser-in-an-angular-8-component-53644a2280e3)
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
